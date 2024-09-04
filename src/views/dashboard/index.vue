@@ -1,45 +1,25 @@
 <template>
-  <el-table
-    :data="tableData"
-    style="width: 100%">
+  <el-table :data="tableData" style="width: 100%">
     <el-table-column type="expand">
       <template slot-scope="props">
         <el-form label-position="left" inline class="demo-table-expand">
-          <el-form-item label="商品名称">
-            <span>{{ props.row.name }}</span>
+          <el-form-item label="asset_path">
+            <span>{{ props.row.asset_path }}</span>
           </el-form-item>
-          <el-form-item label="所属店铺">
-            <span>{{ props.row.shop }}</span>
+          <el-form-item label="res_size">
+            <span>{{ props.row.res_size }}</span>
           </el-form-item>
-          <el-form-item label="商品 ID">
-            <span>{{ props.row.id }}</span>
-          </el-form-item>
-          <el-form-item label="店铺 ID">
-            <span>{{ props.row.shopId }}</span>
-          </el-form-item>
-          <el-form-item label="商品分类">
-            <span>{{ props.row.category }}</span>
-          </el-form-item>
-          <el-form-item label="店铺地址">
-            <span>{{ props.row.address }}</span>
-          </el-form-item>
-          <el-form-item label="商品描述">
-            <span>{{ props.row.desc }}</span>
+          <el-form-item label="res_compressed_size">
+            <span>{{ props.row.res_compressed_size }}</span>
           </el-form-item>
         </el-form>
       </template>
     </el-table-column>
-    <el-table-column
-      label="商品 ID"
-      prop="id">
+    <el-table-column label="asset_path" prop="asset_path">
     </el-table-column>
-    <el-table-column
-      label="商品名称"
-      prop="name">
+    <el-table-column label="res_size" prop="res_size">
     </el-table-column>
-    <el-table-column
-      label="描述"
-      prop="desc">
+    <el-table-column label="res_compressed_size" prop="res_compressed_size">
     </el-table-column>
   </el-table>
 </template>
@@ -48,10 +28,12 @@
 .demo-table-expand {
   font-size: 0;
 }
+
 .demo-table-expand label {
   width: 90px;
   color: #99a9bf;
 }
+
 .demo-table-expand .el-form-item {
   margin-right: 0;
   margin-bottom: 0;
@@ -63,39 +45,28 @@
 export default {
   data() {
     return {
-      tableData: [{
-        id: '12987122',
-        name: '好滋好味鸡蛋仔',
-        category: '江浙小吃、小吃零食',
-        desc: '荷兰优质淡奶，奶香浓而不腻',
-        address: '上海市普陀区真北路',
-        shop: '王小虎夫妻店',
-        shopId: '10333'
-      }, {
-        id: '12987123',
-        name: '好滋好味鸡蛋仔',
-        category: '江浙小吃、小吃零食',
-        desc: '荷兰优质淡奶，奶香浓而不腻',
-        address: '上海市普陀区真北路',
-        shop: '王小虎夫妻店',
-        shopId: '10333'
-      }, {
-        id: '12987125',
-        name: '好滋好味鸡蛋仔',
-        category: '江浙小吃、小吃零食',
-        desc: '荷兰优质淡奶，奶香浓而不腻',
-        address: '上海市普陀区真北路',
-        shop: '王小虎夫妻店',
-        shopId: '10333'
-      }, {
-        id: '12987126',
-        name: '好滋好味鸡蛋仔',
-        category: '江浙小吃、小吃零食',
-        desc: '荷兰优质淡奶，奶香浓而不腻',
-        address: '上海市普陀区真北路',
-        shop: '王小虎夫妻店',
-        shopId: '10333'
-      }]
+      tableData: [
+        {
+          "asset_path": "Assets/ResourcesRaw/Player/9001_male/Ani/ani_idle_lob_male.anim",
+          "res_size": 5557452,
+          "res_compressed_size": 3359532
+        },
+        {
+          "asset_path": "Assets/ResourcesRaw/NPC/001_ProfessorPhorus/00/Model/rig_lob_00100_lv3.FBX",
+          "res_size": 1782579,
+          "res_compressed_size": 1080452
+        },
+        {
+          "asset_path": "Assets/ResourcesRaw/NPC/0555_jiangbei/07/Mat_Tex/t_nm_lob_07jiangbei_Shuijing_lv3.tga",
+          "res_size": 1048576,
+          "res_compressed_size": 641518
+        },
+        {
+          "asset_path": "Assets/ResourcesRaw/NPC/0555_jiangbei/07/Mat_Tex/t_nm_lob_07jiangbei_lv3.tga",
+          "res_size": 1048576,
+          "res_compressed_size": 641518
+        }
+      ]
     }
   }
 }
