@@ -179,7 +179,7 @@ export const asyncRoutes = [
         path: 'index',
         component: () => import('@/views/icons/index'),
         name: 'Icons',
-        meta: { title: '按 comparison bundle 查看', icon: '', noCache: true }
+        meta: { title: '按 comparison bundle 查看', icon: '' }
       }
     ]
   },
