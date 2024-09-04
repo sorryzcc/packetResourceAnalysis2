@@ -79,7 +79,7 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: '按benchmark bundle 查看', icon: '', affix: true }
+        meta: { title: '按benchmark bundle 查看', icon: '', affix: false }
       }
     ]
   },
@@ -91,7 +91,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/documentation/index'),
         name: 'Documentation',
-        meta: { title: '按benchmark asset查看', icon: '', affix: true }
+        meta: { title: '按benchmark asset查看', icon: '', affix: false }
       }
     ]
   },
