@@ -21,3 +21,5 @@ selenium-debug.log
 
 package-lock.json
 yarn.lock
+
+src/assets/all_bundle_asset_size.json
