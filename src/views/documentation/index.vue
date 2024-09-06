@@ -17,7 +17,7 @@
     </div>
     <el-table :data="bundleAssets" style="width: 100%">
       <el-table-column prop="asset_path" label="Asset Path" />
-      <el-table-column prop="res_size" label="Resource Size (bytes)" />
+      <el-table-column prop="size" label="Resource Size (bytes)" />
       <el-table-column prop="res_compressed_size" label="Compressed Size (bytes)" />
     </el-table>
   </div>
@@ -40,9 +40,9 @@ export default {
     }
   },
   created() {
-    console.log(this.allBenchmarkItems['all_benchmark_items']['all_bundle_sorted_items'][0].assets) // 检查是否包含数据
+    console.log(this.allBenchmarkItems['all_comparison_items']['all_pkg_sorted_items']) // 检查是否包含数据
     // debugger
-    this.bundleAssets = this.allBenchmarkItems['all_benchmark_items']['all_bundle_sorted_items'][0].assets
+    this.bundleAssets = this.allBenchmarkItems['all_comparison_items']['all_pkg_sorted_items'].slice(0,100)
   },
   methods: {
     handleResourceChange(value) {

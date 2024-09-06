@@ -48,7 +48,7 @@ export default {
     }
   },
   created() {
-    console.log(this.allBenchmarkItems['all_benchmark_items']['all_bundle_sorted_items'][0].assets) // 检查是否包含数据
+    // console.log(this.allBenchmarkItems['all_benchmark_items']['all_bundle_sorted_items'][0].assets) // 检查是否包含数据
     // debugger
     this.bundleAssets = this.allBenchmarkItems['all_benchmark_items']['all_bundle_sorted_items'][0].assets
   },
