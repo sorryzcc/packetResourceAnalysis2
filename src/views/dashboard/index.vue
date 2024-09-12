@@ -87,7 +87,7 @@ export default {
     },
     filterLargeResources() {
       // 5MB 转换为字节
-      const MAX_SIZE = 5 * 1024 * 1024
+      const MAX_SIZE = 5 * 1024 * 1024;
       this.tableData = originData['all_benchmark_items']['all_bundle_sorted_items'][0].assets.filter(bundleAssets => bundleAssets['res_size'] > MAX_SIZE)
     }
   }
