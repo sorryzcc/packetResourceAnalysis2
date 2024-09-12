@@ -40,7 +40,7 @@ export default {
   },
   created() {
     // 假设这里你从后端获取数据
-    this.fetchData();
+    this.fetchData()
   },
   methods: {
     fetchData() {
