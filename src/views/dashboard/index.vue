@@ -81,14 +81,14 @@ export default {
       if (value === '5M以上') {
         this.filterLargeResources()
       } else if (value === '全部') {
-        this.bundleAssets = this.bundleAssets = this.allBenchmarkItems['all_benchmark_items']['all_bundle_sorted_items'][0].assets
+        this.tableData = originData['all_benchmark_items']['all_bundle_sorted_items'][0].assets
       }
       // 可以根据需要添加更多条件判断
     },
     filterLargeResources() {
       // 5MB 转换为字节
       const MAX_SIZE = 5 * 1024 * 1024
-      this.bundleAssets = this.bundleAssets.filter(bundleAssets => bundleAssets['res_size'] > MAX_SIZE)
+      this.tableData = originData['all_benchmark_items']['all_bundle_sorted_items'][0].assets.filter(bundleAssets => bundleAssets['res_size'] > MAX_SIZE)
     }
   }
 }
